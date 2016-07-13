@@ -4,6 +4,20 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <title>danmharris.com</title>
+
+    <script>
+    window.onload = function(){
+      var menuBtn = document.getElementsByClassName('nav-menu-btn')[0];
+      menuBtn.onclick = function(){
+        var menu = document.getElementsByClassName('nav-pages')[0];
+        if (menu.style.display == ""){
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "";
+        }
+      };
+    };
+    </script>
   </head>
 
   <body>
@@ -21,12 +35,11 @@
           </svg>
 
         </div>
-        <div class="nav-pages">
-          <ul class="nav-pages-bar">
-            <li>Home</li> |
+        <div class="nav-menu-btn">&#9776</div>
+          <ul class="nav-pages">
+            <li>Home</li>
             <li>Projects</li>
           </ul>
-        </div>
       </div>
       <div class="banner">
           <div class="banner-title">DAN HARRIS</div>
