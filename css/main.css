@@ -56,6 +56,13 @@ p{
 .banner-title{
   color:white;
   font-size:72pt;
+  text-align: center;
+}
+
+@media screen and (max-width:249px){
+  .nav-social{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 499px){
@@ -63,18 +70,10 @@ p{
     font-size:48pt;
   }
 
-  .nav-menu-btn{
-    display: block;
-  }
-
   .nav-pages{
     clear:both;
     display:none;
     text-align: right;
-  }
-
-  .nav-pages li{
-    display:block;
   }
 }
 
