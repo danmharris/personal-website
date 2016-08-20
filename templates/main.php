@@ -50,20 +50,21 @@
       </div>
     </div>
     <div class="content">
-      <br>
-      <div class="content-title">
-        Section Title
-      </div>
-      <div class="content-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sollicitudin mi vel efficitur. Praesent pulvinar aliquam neque, in tempor nunc fermentum id. Maecenas condimentum egestas dui, ut auctor nunc convallis et. Quisque vitae laoreet sapien, eu interdum ex. Etiam posuere lorem nunc, eu ultricies justo fermentum nec. Donec eu lobortis urna. Donec est purus, viverra et ex viverra, mattis convallis neque. Aenean aliquet varius mi vehicula mattis. Morbi aliquam est eget ligula facilisis, a cursus nulla venenatis. Aliquam lacinia nibh nec mattis imperdiet. Aenean maximus semper arcu, a tristique lectus auctor eu. Nunc dignissim mauris sit amet velit auctor, et consectetur elit tincidunt. Mauris ligula justo, faucibus vel nunc eu, aliquam commodo velit.</p>
-      </div>
-      <br>
-      <div class="content-title">
-        Section Title
-      </div>
-      <div class="content-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sollicitudin mi vel efficitur. Praesent pulvinar aliquam neque, in tempor nunc fermentum id. Maecenas condimentum egestas dui, ut auctor nunc convallis et. Quisque vitae laoreet sapien, eu interdum ex. Etiam posuere lorem nunc, eu ultricies justo fermentum nec. Donec eu lobortis urna. Donec est purus, viverra et ex viverra, mattis convallis neque. Aenean aliquet varius mi vehicula mattis. Morbi aliquam est eget ligula facilisis, a cursus nulla venenatis. Aliquam lacinia nibh nec mattis imperdiet. Aenean maximus semper arcu, a tristique lectus auctor eu. Nunc dignissim mauris sit amet velit auctor, et consectetur elit tincidunt. Mauris ligula justo, faucibus vel nunc eu, aliquam commodo velit.</p>
-      </div>
+      <?php
+        $files = array_slice(scandir('../content/home/'),2);
+        foreach($files as $file){
+          $lines = file("../content/home/".$file);
+          echo "<br>";
+          echo '<div class="content-title">';
+          echo $lines[0];
+          echo "</div>";
+          echo '<div class="content-body">';
+          for($i = 2;$i<=count($lines);$i++){
+            echo $lines[$i]; 
+          }
+          echo "</div>";
+        }
+      ?>
     </div>
     <div class="footer">
       <ul class="footer-nav">
