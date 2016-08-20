@@ -1,5 +1,5 @@
 <?php
 $path = "../content/projects/";
-$name = "Projects";
+$title = "Projects";
 include '../templates/main.php';
 ?>

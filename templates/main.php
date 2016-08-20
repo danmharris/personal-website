@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <title>danmharris.com</title>
+    <title><?php echo $title; ?></title>
 
     <script>
     window.onload = function(){
@@ -40,20 +40,21 @@
         </div>
         <div class="nav-menu-btn">&#9776</div>
           <ul class="nav-pages">
-            <li>Home</li>
-            <li>Projects</li>
+            <a href="/home"><li>Home</li></a>
+            <a href="/projects"><li>Projects</li></a>
           </ul>
       </div>
       <div class="banner">
-          <div class="banner-title">DAN HARRIS</div>
+          <a href="/home"><div class="banner-title">DAN HARRIS</div></a>
 
       </div>
     </div>
     <div class="content">
       <?php
-        $files = array_slice(scandir('../content/home/'),2);
+        if ($type === "dir"){
+        $files = array_slice(scandir($path),2);
         foreach($files as $file){
-          $lines = file("../content/home/".$file);
+          $lines = file($path.$file);
           echo "<br>";
           echo '<div class="content-title">';
           echo $lines[0];
@@ -64,13 +65,14 @@
           }
           echo "</div>";
         }
+      }
       ?>
     </div>
     <div class="footer">
       <ul class="footer-nav">
-        <li>Downloads</li> |
-        <li>Sitemap</li> |
-        <li>Contact</li>
+        <a href="/downloads"><li>Downloads</li></a> |
+        <a href="/sitemap"><li>Sitemap</li></a> |
+        <a href="/contact"><li>Contact</li></a>
       </ul>
       <div class="copyright">&copy Dan Harris 2016</div>
 

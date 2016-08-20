@@ -9,6 +9,11 @@ p{
   text-align: justify;
 }
 
+a, a:visited{
+  color:inherit;
+  text-decoration: inherit;
+}
+
 .header{
     background-image: url("../assets/banner.jpg");
     background-position: center;

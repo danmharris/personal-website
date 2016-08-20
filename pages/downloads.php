@@ -1,6 +1,6 @@
 <?php
-$path = "../content/home/";
+$path = "../content/downloads/";
 $type = "dir";
-$title = "Home";
+$title = "Downloads";
 include '../templates/main.php';
 ?>
