@@ -51,12 +51,10 @@
     </div>
     <div class="content">
       <?php
-        if ($type === "dir"){
         $files = array_slice(scandir($path),2);
         foreach($files as $file){
           include ($path.$file);
         }
-      }
       ?>
     </div>
     <div class="footer">
