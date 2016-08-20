@@ -1,5 +1,6 @@
 <br>
-<div class="content-title">First Section</div>
+<div class="content-title">About Me</div>
 <div class="content-body">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sollicitudin mi vel efficitur. Praesent pulvinar aliquam neque, in tempor nunc fermentum id. Maecenas condimentum egestas dui, ut auctor nunc convallis et. Quisque vitae laoreet sapien, eu interdum ex. Etiam posuere lorem nunc, eu ultricies justo fermentum nec. Donec eu lobortis urna. Donec est purus, viverra et ex viverra, mattis convallis neque. Aenean aliquet varius mi vehicula mattis. Morbi aliquam est eget ligula facilisis, a cursus nulla venenatis. Aliquam lacinia nibh nec mattis imperdiet. Aenean maximus semper arcu, a tristique lectus auctor eu. Nunc dignissim mauris sit amet velit auctor, et consectetur elit tincidunt. Mauris ligula justo, faucibus vel nunc eu, aliquam commodo velit.</p>
+    <img src="assets/profile.jpg" width="300px" align="left" style="margin:15px";/>
+	<p>Hello, my name is Dan Harris and I am an 18 year old technology enthusiast. I have had an interest in computing for the last 8 years and am planning to pursue a career in the industry. I have just completed studying A-Levels in Computing, Maths and Physics where I got results of A*A*A respectively. I also have an AS in Further Maths and Geography (Both at A grade). These results have earned me a place on a Computer Science course at the University of Southampton starting from September 2016.</p>
 </div>

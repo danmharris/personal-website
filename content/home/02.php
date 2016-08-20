@@ -1,5 +1,8 @@
 <br>
-<div class="content-title">Second Section</div>
+<div class="content-title">My Interests</div>
 <div class="content-body">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sollicitudin mi vel efficitur. Praesent pulvinar aliquam neque, in tempor nunc fermentum id. Maecenas condimentum egestas dui, ut auctor nunc convallis et. Quisque vitae laoreet sapien, eu interdum ex. Etiam posuere lorem nunc, eu ultricies justo fermentum nec. Donec eu lobortis urna. Donec est purus, viverra et ex viverra, mattis convallis neque. Aenean aliquet varius mi vehicula mattis. Morbi aliquam est eget ligula facilisis, a cursus nulla venenatis. Aliquam lacinia nibh nec mattis imperdiet. Aenean maximus semper arcu, a tristique lectus auctor eu. Nunc dignissim mauris sit amet velit auctor, et consectetur elit tincidunt. Mauris ligula justo, faucibus vel nunc eu, aliquam commodo velit.</p>
+    <p>I have been using Windows all my life but after using Ubuntu 9.04 in 2009, I have had an interest in trying out various Linux distributions, because of what variety there is between them. I have the intent on eventually using it as my main operating system, due to the advantages it has over the Windows platform. </p>
+
+<p>One of my main interests in computing for the past few years has been in servers. Here I have experimented with various pieces of software on both Windows and Linux, such as configuration management, DNS, E-Mail etc. Soon I will begin to venture into other areas of networking such as routing and VLANs.
+</p>
 </div>
