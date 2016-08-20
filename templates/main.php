@@ -40,12 +40,12 @@
         </div>
         <div class="nav-menu-btn">&#9776</div>
           <ul class="nav-pages">
-            <a href="/home"><li>Home</li></a>
+            <a href="/"><li>Home</li></a>
             <a href="/projects"><li>Projects</li></a>
           </ul>
       </div>
       <div class="banner">
-          <a href="/home"><div class="banner-title">DAN HARRIS</div></a>
+          <a href="/"><div class="banner-title">DAN HARRIS</div></a>
 
       </div>
     </div>
@@ -54,16 +54,7 @@
         if ($type === "dir"){
         $files = array_slice(scandir($path),2);
         foreach($files as $file){
-          $lines = file($path.$file);
-          echo "<br>";
-          echo '<div class="content-title">';
-          echo $lines[0];
-          echo "</div>";
-          echo '<div class="content-body">';
-          for($i = 2;$i<=count($lines);$i++){
-            echo $lines[$i]; 
-          }
-          echo "</div>";
+          include ($path.$file);
         }
       }
       ?>
