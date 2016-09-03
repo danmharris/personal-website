@@ -1,8 +1,8 @@
 <HTML>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link href='css/font.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <title><?php echo $title; ?></title>
 
     <script>
@@ -27,25 +27,25 @@
         <a href="https://github.com/danh98" target="_blank">
           <svg height="40" width="40">
             <circle cx="20" cy="20" r="15" stroke="white" stroke-width="2" fill="none"/>
-            <image width="24px" height="24px" x="8" y="8" xlink:href="../assets/github.png">
+            <image width="24px" height="24px" x="8" y="8" xlink:href="assets/github.png">
           </svg>
         </a>
 
         <a href="https://twitter.com/danh1606" target="_blank">
           <svg height="40" width="40">
             <circle cx="20" cy="20" r="15" stroke="white" stroke-width="2" fill="none"/>
-            <image width="24px" height="24px" x="8" y="8" xlink:href="../assets/twitter.png">
+            <image width="24px" height="24px" x="8" y="8" xlink:href="assets/twitter.png">
           </svg>
         </a>
         </div>
         <div class="nav-menu-btn">&#9776</div>
           <ul class="nav-pages">
-            <a href="/"><li>Home</li></a>
-            <a href="/projects"><li>Projects</li></a>
+            <a href="./"><li>Home</li></a>
+            <a href="./projects"><li>Projects</li></a>
           </ul>
       </div>
       <div class="banner">
-          <a href="/"><div class="banner-title">DAN HARRIS</div></a>
+          <a href="./"><div class="banner-title">DAN HARRIS</div></a>
 
       </div>
     </div>
@@ -59,9 +59,9 @@
     </div>
     <div class="footer">
       <ul class="footer-nav">
-        <a href="/downloads"><li>Downloads</li></a> |
-        <a href="/sitemap"><li>Sitemap</li></a> |
-        <a href="/contact"><li>Contact</li></a>
+        <a href="./downloads"><li>Downloads</li></a> |
+        <a href="./sitemap"><li>Sitemap</li></a> |
+        <a href="./contact"><li>Contact</li></a>
       </ul>
       <div class="copyright">&copy Dan Harris 2016</div>
 
