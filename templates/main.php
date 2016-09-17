@@ -1,6 +1,9 @@
 <HTML>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Dan Harris">
+    <meta name="author" content="Dan Harris">
+    <meta name="description" content="Personal website for Dan Harris">
     <link href='css/font.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title><?php echo $title; ?></title>
@@ -27,14 +30,14 @@
         <a href="https://github.com/danh98" target="_blank">
           <svg height="40" width="40">
             <circle cx="20" cy="20" r="15" stroke="white" stroke-width="2" fill="none"/>
-            <image width="24px" height="24px" x="8" y="8" xlink:href="assets/github.png">
+            <image width="24px" height="24px" x="8" y="8" xlink:href="assets/github.png" title="Github">
           </svg>
         </a>
 
         <a href="https://twitter.com/danh1606" target="_blank">
           <svg height="40" width="40">
             <circle cx="20" cy="20" r="15" stroke="white" stroke-width="2" fill="none"/>
-            <image width="24px" height="24px" x="8" y="8" xlink:href="assets/twitter.png">
+            <image width="24px" height="24px" x="8" y="8" xlink:href="assets/twitter.png" title="Twitter">
           </svg>
         </a>
         </div>
@@ -51,9 +54,8 @@
     </div>
     <div class="content">
       <?php
-        $files = array_slice(scandir($path),2);
         foreach($files as $file){
-          include ($path.$file);
+          include ($file);
         }
       ?>
     </div>
