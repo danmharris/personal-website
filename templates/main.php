@@ -65,7 +65,7 @@
         <a href="./sitemap"><li>Sitemap</li></a> |
         <a href="./contact"><li>Contact</li></a>
       </ul>
-      <div class="copyright">&copy Dan Harris 2016</div>
+      <div class="copyright">&copy Dan Harris <?php echo date("Y"); ?></div>
 
     </div>
   </body>
