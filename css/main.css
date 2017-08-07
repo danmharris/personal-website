@@ -17,6 +17,13 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-width: 400px;
+}
+
+#navigation-button{
+  z-index:2;
+  font-size: 1.5em;
+  padding:5px;
 }
 
 .navigation{
@@ -25,17 +32,40 @@ body{
   right: 1%;
   background-color: rgba(142,166,196,0.6);
   border-radius: 5px;
-
 }
 
-.navigation ul{
+#navigation-menu{
   list-style: none;
   padding:5px;
   margin: 0;
 }
 
-.navigation li{
-  display:inline;
+
+@media screen and (min-width:500px){
+  .navigation-item{
+    display:inline;
+  }
+
+  #navigation-button{
+    display: none;
+  }
+}
+
+@media screen and (max-width:499px){
+  .navigation-item{
+    display:block;
+  }
+
+  #navigation-menu{
+    display:none;
+  }
+
+  .bar{
+    display:none;
+  }
+}
+
+.navigation-item{
   font-size: 1.5em;
   margin-left:5px;
   margin-right: 5px;
@@ -54,6 +84,19 @@ body{
 #tagline{
   font-size:3em;
       text-align: center;
+}
+
+
+@media screen and (max-width:599px){
+  #title{
+    font-size: 3.5em;
+
+  }
+
+  #tagline{
+    font-size: 1.5em;
+
+  }
 }
 
 .section-header{
