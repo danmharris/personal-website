@@ -1,0 +1,123 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <script src="../javascript/jquery-3.2.1.min.js"></script>
+  <script src ="../javascript/jquery-ui.min.js"></script>
+  <title>Dan Harris.</title>
+
+</head>
+<body>
+  <div id="header">
+    <div id="navigation-button" class="navigation">&#9776</div>
+    <div class="navigation blank-list" id="nav-bar">
+      <ul id="navigation-menu">
+        <li class="navigation-item"><a href="#">About</a></li><span class="bar">|</span>
+        <li class="navigation-item"><a href="#interests">Skills & Interests</a></li><span class="bar">|</span>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+
+    <div id="banner">
+    <div id="title">DAN HARRIS.</div>
+    <div id="tagline">Student, Programmer, Technology Enthusiast</div>
+  </div>
+  </div>
+
+  <div id="main">
+    <div class="section">
+      <div class="section-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit diam id velit commodo pellentesque. Quisque dignissim gravida dictum. In malesuada sagittis mauris, at malesuada odio ultrices in. Maecenas pellentesque orci vitae arcu dignissim bibendum. Integer vel ipsum eget mi rutrum dapibus et a justo. Aenean maximus lacus aliquet massa ultricies dapibus at quis nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+    </div>
+    <div class="section">
+      <a id="interests"></a>
+      <div class="section-header">Skills & Interests</div>
+      <div class="section-subheader">Programming</div>
+      <div class="section-body">
+        <ul class="blank-list">
+          <li>HTML, CSS, Javascript</li>
+          <li>PHP</li>
+          <li>C, Java (SE & EE), Pascal</li>
+        </ul>
+      </div>
+      <div class="section-subheader">DevOps</div>
+      <div class="section-body">
+        <ul class="blank-list">
+          <li>Docker, Ansible, Git</li>
+          <li>MySQL/MariaDB, SQLite</li>
+        </ul>
+      </div>
+      <div class="section-subheader">Server Technologies & Networking</div>
+      <div class="section-body">
+        <ul class="blank-list">
+          <li>Active Directory</li>
+          <li>DNS & DHCP</li>
+          <li>VLANs</li>
+          <li>VMWare ESXi</li>
+          <li>Windows Server, Ubuntu, Debian, CentOS</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <a id="projects"></a>
+      <div class="section-header">Projects</div>
+      <div class="section-subheader">Current</div>
+      <div class="section-body">
+        <table>
+          <tr>
+            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
+            <td class="project-desc">A summer project to create a RESTful API for a service that allows students to ask questions about their modules and have other students answer them</td>
+          </tr>
+          <tr>
+            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
+            <td class="project-desc">A barebones blog framework that allows posts stored in a MySQL database to be inserted into any template on a website</td>
+          </tr>
+          <tr>
+            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
+            <td class="project-desc">HTML, CSS, Javascript, PHP: The website you are currently viewing, is created completely from the ground up and acts as a hub for all my other projects</td>
+          </tr>
+        </table>
+      </div>
+      <div class="section-subheader">Previous</div>
+      <div class="section-body">
+        <table>
+          <tr>
+            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
+            <td class="project-desc">Done as my A2 Computing Project, allows the secretary of a club to manage attendance and finances</td>
+          </tr>
+          <tr>
+            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
+            <td class="project-desc">Completed weekly in the first semester of my first year at university. Each week had a different topic, ranging from web scraping, image processing or networking</td>
+          </tr>
+        </table>
+      </div>
+        <style>
+          .project-image{
+            width:40%;
+          }
+
+          .project-desc{
+            width:60%;
+            padding-left: 20px;
+          }
+
+          img{
+            max-width: 100%;
+          }
+        </style>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <div id="copyright">Copyright &copy Dan Harris 2017</div>
+  </div>
+  <script>
+  $("#navigation-button").click(function() {
+    $("#navigation-menu").toggle('size', {origin: ["top", "right"]}, 200);
+  });
+  </script>
+</body>
+</html>

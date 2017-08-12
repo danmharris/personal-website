@@ -4,7 +4,6 @@
   <link rel="stylesheet" type="text/css" href="../css/main.css"/>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <script src="../javascript/jquery-3.2.1.min.js"></script>
-
   <script src ="../javascript/jquery-ui.min.js"></script>
   <title>Dan Harris.</title>
 </head>
@@ -18,11 +17,7 @@
         <li class="navigation-item"><a href="#projects">Projects</a></li>
       </ul>
     </div>
-    <script>
-    $("#navigation-button").click(function() {
-      $("#navigation-menu").toggle('size', {origin: ["top", "right"]}, 200);
-    });
-    </script>
+
     <div id="banner">
     <div id="title">DAN HARRIS.</div>
     <div id="tagline">Student, Programmer, Technology Enthusiast</div>
@@ -37,6 +32,7 @@
     </div>
     <div class="section">
       <div class="section-header">Section Header</div>
+      <div class="section-subheader">Section Subheader</div>
       <div class="section-body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit diam id velit commodo pellentesque. Quisque dignissim gravida dictum. In malesuada sagittis mauris, at malesuada odio ultrices in. Maecenas pellentesque orci vitae arcu dignissim bibendum. Integer vel ipsum eget mi rutrum dapibus et a justo. Aenean maximus lacus aliquet massa ultricies dapibus at quis nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </div>
@@ -52,5 +48,10 @@
   <div id="footer">
     <div id="copyright">Copyright &copy Dan Harris 2017</div>
   </div>
+  <script>
+  $("#navigation-button").click(function() {
+    $("#navigation-menu").toggle('size', {origin: ["top", "right"]}, 200);
+  });
+  </script>
 </body>
 </html>

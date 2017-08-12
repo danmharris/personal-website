@@ -34,8 +34,13 @@ body{
   border-radius: 5px;
 }
 
+.blank-list{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
 #navigation-menu{
-  list-style: none;
   padding:5px;
   margin: 0;
 }
@@ -99,26 +104,33 @@ body{
   }
 }
 
-.section-header{
+.section{
   text-align: center;
+}
+
+.section-subheader{
+    font-size: 1.6em;
+    text-decoration: underline;
+}
+
+.section-header{
   background-color: BDBDBD;
   height:100px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.5em;
-  text-decoration: underline;
-
+  font-weight: bold;
+  margin-bottom:20px;
 }
 
 .section-body{
   width:50%;
   margin-left: auto;
   margin-right: auto;
-  text-align: justify;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   min-width:400px;
 }
 
