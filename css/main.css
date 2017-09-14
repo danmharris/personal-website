@@ -113,7 +113,7 @@ a, a:visited{
 }
 
 .section-subheader{
-    font-size: 1.6em;
+    font-size: 2em;
     text-decoration: underline;
 }
 
@@ -187,8 +187,12 @@ a, a:visited{
 .project-image{
   margin:0 auto;
   width: 45%;
-  min-width:400px;
+  min-width:300px;
   margin:5px;
+}
+
+.project-image:hover{
+  cursor: pointer;
 }
 
 #footer{
