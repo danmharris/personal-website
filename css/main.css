@@ -119,7 +119,7 @@ a, a:visited{
 
 .section-header{
   background-color: BDBDBD;
-  height:100px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,7 +173,7 @@ a, a:visited{
 .modal-close{
   float:right;
   margin-right:10px;
-  font-size: 1.6em;
+  font-size: 2em;
 }
 
 .modal-close:hover{
