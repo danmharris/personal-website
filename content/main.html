@@ -71,54 +71,69 @@
     <div class="section">
       <a id="projects"></a>
       <div class="section-header">What's kept me busy</div>
+      <div class="section-body">Here are some of my current and previous projects. Click on the image to find out more about them.</div>
+
       <div class="section-subheader">Current</div>
       <div class="section-body">
-        <table>
-          <tr>
-            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
-            <td class="project-desc"><b>Module Q&ampA:</b> summer project to create a RESTful API in Java for a service that allows students to ask questions about their modules and have other students answer them</td>
-          </tr>
-          <tr>
-            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
-            <td class="project-desc"><b>Blog:</b> A barebones blog framework written in PHP that allows posts stored in a MySQL database to be inserted into any template on a website</td>
-          </tr>
-          <tr>
-            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
-            <td class="project-desc"><b>Personal Website:</b> The website you are currently viewing. It is created completely from the ground up in HTML, CSS &amp Javascript and acts as a hub for all my other projects</td>
-          </tr>
-          <tr>
-            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
-            <td class="project-desc"><b>Homelab:</b> This is my means to experiment with any networking/server technologies that I am interested in. Currently it is an ESXi host with services like pfSense, Nextcloud, Grafana, FreeIPA Identity Management and a mail server</td>
-          </tr>
-        </table>
+
+        <div class="project-list">
+          <img class="project-image" id="project-moduleqa" src="../assets/project_placeholder.jpg" />
+          <img class="project-image" id="project-blog" src="../assets/project_placeholder.jpg" />
+          <img class="project-image" id="project-website" src="../assets/project_placeholder.jpg" />
+          <img class="project-image" id="project-homelab" src="../assets/project_placeholder.jpg" />
+
+        </div>
+
+        <div class="modal" id="modal-moduleqa">
+          <div class="modal-content">
+            <span class="modal-close">&times</span>
+          <div class="modal-header">Module Q&ampA</div>
+          <div class="modal-body">Summer project to create a RESTful API in Java for a service that allows students to ask questions about their modules and have other students answer them</div>
+        </div>
+        </div>
+        <div class="modal" id="modal-blog">
+          <div class="modal-content">
+            <span class="modal-close">&times</span>
+          <div class="modal-header">Blog</div>
+          <div class="modal-body">A barebones blog framework written in PHP that allows posts stored in a MySQL database to be inserted into any template on a website</div>
+        </div>
+        </div>
+        <div class="modal" id="modal-website">
+          <div class="modal-content">
+            <span class="modal-close">&times</span>
+          <div class="modal-header">Personal Website</div>
+          <div class="modal-body">The website you are currently viewing. It is created completely from the ground up in HTML, CSS &amp Javascript and acts as a hub for all my other projects</div>
+        </div>
+        </div>
+        <div class="modal" id="modal-homelab">
+          <div class="modal-content">
+            <span class="modal-close">&times</span>
+          <div class="modal-header">Homelab</div>
+          <div class="modal-body">This is my means to experiment with any networking/server technologies that I am interested in. Currently it is an ESXi host with services like pfSense, Nextcloud, Grafana, FreeIPA Identity Management and a mail server</div>
+        </div>
+        </div>
       </div>
       <div class="section-subheader">Previous</div>
       <div class="section-body">
-        <table>
-          <tr>
-            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
-            <td class="project-desc"><b>Bowls Club Manager:</b> Done as my A2 Computing Project, allows the secretary of a club to manage attendance and finances through an Android app</td>
-          </tr>
-          <tr>
-            <td class="project-image"><img src="../assets/project_placeholder.jpg" /></td>
-            <td class="project-desc"><b>Programming Challenges:</b> Completed weekly in the first semester of my first year at university. Each week had a different topic, ranging from web scraping, image processing or networking</td>
-          </tr>
-        </table>
+        <div class="project-list">
+          <img class="project-image" id="project-bowlsmanager" src="../assets/project_placeholder.jpg" />
+          <img class="project-image" id="project-progchallenges" src="../assets/project_placeholder.jpg" />
+        </div>
+        <div class="modal" id="modal-bowlsmanager">
+          <div class="modal-content">
+            <span class="modal-close">&times</span>
+          <div class="modal-header">Bowls Club Manager</div>
+          <div class="modal-body">Done as my A2 Computing Project, allows the secretary of a club to manage attendance and finances through an Android app</div>
+        </div>
+        </div>
+        <div class="modal" id="modal-progchallenges">
+          <div class="modal-content">
+            <span class="modal-close">&times</span>
+          <div class="modal-header">Programming Challenges</div>
+          <div class="modal-body">Completed weekly in the first semester of my first year at university. Each week had a different topic, ranging from web scraping, image processing or networking</div>
+        </div>
+        </div>
       </div>
-        <style>
-          .project-image{
-            width:40%;
-          }
-
-          .project-desc{
-            width:60%;
-            padding-left: 20px;
-          }
-
-          img{
-            max-width: 100%;
-          }
-        </style>
 
     </div>
     <div class="section">
@@ -140,6 +155,16 @@
   <script>
   $("#navigation-button").click(function() {
     $("#navigation-menu").toggle('size', {origin: ["top", "right"]}, 200);
+  });
+
+  $(".project-image").click(function(){
+    var id = $(this).attr("id");
+    id = id.replace("project","modal");
+    $("#"+id).fadeIn("fast");
+  });
+
+  $(".modal-close").click(function(){
+    $(".modal").fadeOut("fast");
   });
   </script>
 </body>
