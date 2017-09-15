@@ -10,7 +10,6 @@ body{
   background-image: url("../assets/titlebanner.jpg");
   background-position: center;
   background-size: cover;
-
   color:white;
   min-height:350px;
   display: flex;
@@ -35,9 +34,9 @@ body{
 }
 
 .blank-list{
-    list-style: none;
-    padding: 0;
-    margin:0;
+  list-style: none;
+  padding: 0;
+  margin:0;
 }
 
 #navigation-menu{
@@ -54,6 +53,10 @@ body{
   #navigation-button{
     display: none;
   }
+
+  .section-body{
+    width:50%;
+  }
 }
 
 @media screen and (max-width:549px){
@@ -67,6 +70,10 @@ body{
 
   .bar{
     display:none;
+  }
+
+  .section-body{
+    width:80%;
   }
 }
 
@@ -84,17 +91,15 @@ a, a:visited{
   color:white;
 }
 
-
 #title{
   font-size: 5em;
-      text-align: center;
+  text-align: center;
 }
 
 #tagline{
   font-size:3em;
-      text-align: center;
+  text-align: center;
 }
-
 
 @media screen and (max-width:599px){
   #title{
@@ -113,8 +118,8 @@ a, a:visited{
 }
 
 .section-subheader{
-    font-size: 2em;
-    text-decoration: underline;
+  font-size: 2em;
+  text-decoration: underline;
 }
 
 .section-header{
@@ -129,13 +134,11 @@ a, a:visited{
 }
 
 .section-body{
-  width:50%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
   padding-bottom: 40px;
   font-size: 1.3em;
-  min-width:400px;
 }
 
 .modal{
@@ -153,13 +156,15 @@ a, a:visited{
   min-width:400px;
   width:60%;
   background-color:white;
-  margin:15% auto;
+  margin:10% auto;
   box-shadow: 10px 10px 5px grey;
 }
 
 .modal-body{
   background-color: e6e6e6;
   padding: 3%;
+  max-height: 75%;
+  overflow: auto;
 }
 
 .modal-header{
@@ -167,7 +172,6 @@ a, a:visited{
   text-align: left;
   padding:10px;
   font-size: 1.6em;
-
 }
 
 .modal-close{
@@ -178,10 +182,6 @@ a, a:visited{
 
 .modal-close:hover{
   cursor:pointer;
-}
-
-.project-list{
-  display: inline;
 }
 
 .project-image{
