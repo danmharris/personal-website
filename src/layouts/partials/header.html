@@ -1,0 +1,24 @@
+<div id="header">
+    <div id="banner">
+        <div id="title">
+            <h1>DAN HARRIS</h1>
+            <h2>Graduate. Developer. Technology Enthusiast.</h2>
+        </div>
+        <div id="social-media">
+            <ul>
+                {{ range .Site.Menus.social }}
+                    <li><a target="_blank" href="{{ .URL }}" rel="noopener">{{ .Pre }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <div id="navigation">
+        <label for="menu-icon" id="menu-icon-label">&#9776;</label>
+        <input type="checkbox" id="menu-icon" hidden>
+        <ul>
+            {{ range .Site.Menus.main }}
+                <li class="menu-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
