@@ -8,10 +8,10 @@
 <ul id="project-grid">
     {{ range .Pages }}
     <li class="project-grid-item">
-        <a href="{{ .Permalink }}">
+        <a href="{{ .Permalink | relURL }}">
             <i class="fas fa-info-circle"></i>
             <h2>{{ .Title }}</h2>
-            <img src='{{ (.Resources.GetMatch "preview.png").Permalink }}' alt="Screenshot of {{ .Title }}">
+            <img src='{{ (.Resources.GetMatch "preview.png").Permalink | relURL }}' alt="Screenshot of {{ .Title }}">
         </a>
     </li>
     {{ end }}

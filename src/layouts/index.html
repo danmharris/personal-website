@@ -8,10 +8,10 @@
     {{ if $project }}
         <h1>Featured Project</h1>
         <div id="featured-project">
-            <div class="featured-project-image"><img src='{{ ($project.Resources.GetMatch "preview.png").Permalink }}'></div>
+            <div class="featured-project-image"><img src='{{ ($project.Resources.GetMatch "preview.png").Permalink | relURL }}'></div>
             <div class="featured-project-overview">
                 {{ $project.Summary }}
-                <h3 class="featured-project-link"><a href="{{ $project.Permalink }}">Find out more</a></h3>
+                <h3 class="featured-project-link"><a href="{{ $project.Permalink | relURL }}">Find out more</a></h3>
             </div>
         </div>
     {{ end }}
