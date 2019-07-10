@@ -1,0 +1,14 @@
+#project-preview {
+    max-width: 750px;
+}
+
+#content h3 {
+    margin: 1em 0;
+}
+
+a.project-button, a.project-button:visited {
+    background-color: #cdcdcd;
+    border-radius: 0.25em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}

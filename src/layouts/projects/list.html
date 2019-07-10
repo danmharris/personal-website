@@ -1,0 +1,19 @@
+{{ define "css" }}
+    <link rel="stylesheet" type="text/css" href="/css/project-grid.css">
+{{ end }}
+
+{{ define "content" }}
+ {{ .Content }}
+
+<ul id="project-grid">
+    {{ range .Pages }}
+    <li class="project-grid-item">
+        <a href="{{ .Permalink }}">
+            <i class="fas fa-info-circle"></i>
+            <h2>{{ .Title }}</h2>
+            <img src='{{ (.Resources.GetMatch "preview.png").Permalink }}' alt="Screenshot of {{ .Title }}">
+        </a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

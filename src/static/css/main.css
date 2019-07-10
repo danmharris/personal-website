@@ -8,6 +8,10 @@ body {
     color: #1e1e1e;
 }
 
+a, a:visited {
+    color: #1e1e1e;
+}
+
 #header {
     width: 100%;
     background-color: #c2d9f3;
@@ -15,7 +19,6 @@ body {
 }
 
 #header a, #header a:visited {
-    color: #1e1e1e;
     text-decoration: none;
 }
 
