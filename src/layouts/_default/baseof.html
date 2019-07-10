@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     {{ block "css" . }}
@@ -15,8 +15,13 @@
 </head>
 <body>
     {{ partial "header.html" . }}
-    {{ block "content" . }}
+    <div id="content">
+        {{ block "content" . }}
 
-    {{ end }}
+        {{ end }}
+    </div>
+    <div id="footer">
+        &copy; Dan Harris 2019
+    </div>
 </body>
 </html>

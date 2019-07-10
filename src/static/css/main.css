@@ -3,14 +3,19 @@
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: #efefef;
+    color: #1e1e1e;
+}
+
 #header {
     width: 100%;
-    background-color: lightgray;
+    background-color: #c2d9f3;
     text-align: center;
 }
 
 #header a, #header a:visited {
-    color: black;
+    color: #1e1e1e;
     text-decoration: none;
 }
 
@@ -92,4 +97,33 @@
 #social-media i {
     font-size: 2em;
     color: white;
+}
+
+#content {
+    text-align: center;
+    padding-top: 1em;
+    font-size: 1.1em;
+}
+
+#content h1 {
+    background-color: #c2d9f3;
+    margin: 0.5em 0;
+    padding: 1em 0;
+}
+
+#content h2 {
+    margin: 0.25em 0;
+}
+
+#content p {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#footer {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 2em;
+    padding-bottom: 0.5em;
+    background-color: #c2d9f3;
 }
