@@ -3,3 +3,29 @@
     max-height: 500px;
     min-height: 250px;
 }
+
+#featured-project {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.featured-project-image {
+    flex: 2 0 0;
+    min-width: 300px;
+}
+
+.featured-project-image > img {
+    width: 100%;
+}
+
+.featured-project-overview {
+    flex: 1.5 0 0;
+    margin: 0 1em;
+}
+
+.featured-project-link {
+    margin-top: 1em;
+}
