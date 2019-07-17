@@ -131,3 +131,11 @@ a, a:visited {
     padding-bottom: 0.5em;
     background-color: #c2d9f3;
 }
+
+#post-info {
+    padding-bottom: 1em;
+    margin: 1em auto;
+    width: 90%;
+    max-width: 750px;
+    border-bottom: 1px solid darkgray;
+}
