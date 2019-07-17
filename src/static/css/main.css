@@ -93,6 +93,10 @@ a, a:visited {
     }
 }
 
+.menu-item-active {
+    text-decoration: underline !important;
+}
+
 #social-media > ul > li {
     display:inline;
     padding: 0 0.5em;

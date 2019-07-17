@@ -16,8 +16,9 @@
         <label for="menu-icon" id="menu-icon-label">&#9776;</label>
         <input type="checkbox" id="menu-icon" hidden>
         <ul>
+            {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-                <li class="menu-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <li class="menu-item"><a class='{{ if $currentPage.IsMenuCurrent "main" . }}menu-item-active{{ end }}' href="{{ .URL }}">{{ .Name }}</a></li>
             {{ end }}
         </ul>
     </div>
