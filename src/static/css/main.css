@@ -139,3 +139,24 @@ a, a:visited {
     max-width: 750px;
     border-bottom: 1px solid darkgray;
 }
+
+.post-summary {
+    margin-bottom: 2em;
+}
+
+.post-summary > p {
+    padding: 1em 0;
+}
+
+.post-summary > a {
+    color: blue;
+}
+
+
+a.button, a.button:visited {
+    background-color: #cdcdcd;
+    border-radius: 0.25em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+}
