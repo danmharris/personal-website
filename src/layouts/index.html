@@ -16,9 +16,11 @@
         </div>
     {{ end }}
 
-    <h1>Recent Posts</h1>
     {{ $posts := first 5 (where .Pages "Section" "posts")}}
-    {{ range $posts }}
-        {{ .Render "summary" }}
+    {{ if $posts }}
+        <h1>Recent Posts</h1>
+        {{ range $posts }}
+            {{ .Render "summary" }}
+        {{ end }}
     {{ end }}
 {{ end }}
