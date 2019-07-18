@@ -1,9 +1,9 @@
 * {
+    margin: 0;
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    margin: 0;
     background-color: #efefef;
     color: #1e1e1e;
 }
@@ -30,7 +30,6 @@ a, a:visited {
 #header ul{
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 #banner {
@@ -125,8 +124,7 @@ a, a:visited {
 }
 
 #content p {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto;
     max-width: 1000px;
     padding: 0 0.5em;
 }
