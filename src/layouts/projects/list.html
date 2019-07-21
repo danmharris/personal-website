@@ -12,7 +12,7 @@
                 <a href="{{ .Permalink | relURL }}">
                     <i class="fas fa-info-circle"></i>
                     <h2>{{ .Title }}</h2>
-                    <img src='{{ (.Resources.GetMatch "preview.png").Permalink | relURL }}' alt="Screenshot of {{ .Title }}">
+                    <img src='{{ (.Resources.GetMatch "preview.jpg").Permalink | relURL }}' alt="Screenshot of {{ .Title }}">
                 </a>
             </li>
             {{ end }}
