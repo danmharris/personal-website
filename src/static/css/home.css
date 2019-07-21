@@ -30,3 +30,8 @@
 .featured-project-link {
     margin-top: 1em;
 }
+
+#content ul {
+    list-style: none;
+    padding: 0;
+}

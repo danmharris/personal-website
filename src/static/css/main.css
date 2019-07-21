@@ -119,7 +119,7 @@ a, a:visited {
     padding: 1em 0;
 }
 
-#content h2 {
+#content h2, #content h3 {
     margin: 0.25em 0;
 }
 

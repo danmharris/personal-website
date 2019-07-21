@@ -2,19 +2,33 @@
 title: Home
 menu: main
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur eros mattis dolor aliquam, ac dapibus urna consequat. Nam vestibulum dolor purus. Nullam eu porta dui, a fringilla nunc. Etiam quis tempor dolor, eget accumsan enim. In sagittis lectus odio, vitae hendrerit mi malesuada nec. Nulla facilisi. Aliquam id sodales sem. Duis consectetur nisi quis quam condimentum molestie. Cras efficitur lectus mauris, nec viverra sem ultricies id. Curabitur semper a nisl eget bibendum. Vivamus eu convallis turpis, vel accumsan tellus. Integer eu feugiat nulla, eget convallis sem.
+Hello, my name is Dan Harris and welcome to my website. I am a 21 year old technology enthusiast who has recently graduated from the University of Southampton with a BSc in Computer Science (first class honours). I am currently working for [Netcraft](https://netcraft.com) as a software developer.
 
 # Skills & Interests
-## Category 1
-* Item
-* Item
-* Item
-* Item
+## Programming
+### Web
+* HTML + CSS/SASS
+* JavaScript
+* TypeScript
+* React + Redux + Reactstrap
+* Angular
+* PHP with Symfony 3, FatFree
+* Static site generators e.g. Jekyll and Hugo (used for this site)
 
-## Category 2
-* Item
-* Item
-* Item
+### Other
+* Java
+* Haskell
+* Python with Flask, Django
+* Perl 5
 
-## Category 3
-Pellentesque eu urna mollis, lacinia elit vel, aliquet nibh. Mauris at volutpat lectus. Nam vehicula sem ligula, ac vestibulum justo laoreet sed. Sed finibus lectus ligula, vitae malesuada risus tristique sed. Sed ut blandit dolor. Morbi eleifend, lectus ac laoreet eleifend, urna justo iaculis ipsum, in tempor urna ipsum ac sapien. Aliquam nec nisl aliquet, tincidunt magna et, pretium orci. Nam at dapibus dolor. Sed laoreet scelerisque eros id ultrices. Donec et enim non ante euismod convallis ac et arcu.
+## DevOps
+* Unit testing (JUnit, pytest, jest)
+* CI / CD
+* Docker
+* Git
+
+## Homelab
+I've always been interested in the deployment and management of medium to large scale networks. This ranges from things such as virtualisation and hypervisors to automation and configuration management through tools such as Ansible. I aim to build a network like this in a home environment, which I will document on [my blog](/posts).
+
+## Linux
+I would consider myself a Linux advocate, having used it since 2009 and as a main operating system since 2018. I also try to use open source software wherever possible. My current distro is Ubuntu 18.04 LTS with stock GNOME 3 as the desktop environment, however I have used distros such as Debian, Fedora, Arch and OpenSUSE in the past.
