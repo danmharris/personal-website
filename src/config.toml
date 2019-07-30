@@ -1,0 +1,17 @@
+baseURL = "https://danmharris.com/"
+languageCode = "en-gb"
+title = "Dan Harris"
+
+[menu]
+  [[menu.social]]
+    identifier = "github"
+    pre = "<i class='fab fa-github'></i>"
+    url = "https://github.com/danmharris"
+  [[menu.social]]
+    identifier = "linkedin"
+    pre = "<i class='fab fa-linkedin'></i>"
+    url = "https://www.linkedin.com/in/dan-harris-730a6012a/"
+  [[menu.social]]
+    identifier = "email"
+    pre = "<i class='fas fa-envelope'></i>"
+    url = "mailto:hello@danmharris.com"

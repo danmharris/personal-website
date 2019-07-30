@@ -1,0 +1,19 @@
+{{ define "content" }}
+    {{ $paginator := .Paginate (where .Pages "Type" "posts") 5 }}
+    {{ if eq $paginator.PageNumber 1 }}
+        <p>{{ .Content }} </p>
+    {{ end }}
+    {{ if $paginator.Pages }}
+        {{ range $paginator.Pages }}
+            {{ .Render "summary" }}
+        {{ end }}
+        {{ if $paginator.HasPrev }}
+            <a class="button" href="{{ .Paginator.Prev.URL }}">Back</a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+            <a class="button" href="{{ .Paginator.Next.URL }}">Next</a>
+        {{ end }}
+    {{ else }}
+        <h2>There doesn't appear to be any posts... yet.</h2>
+    {{ end }}
+{{ end }}
