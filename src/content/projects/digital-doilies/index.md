@@ -1,5 +1,6 @@
 ---
 title: Digital Doilies
+date: "2017-05-01"
 techs: Java, Swing, Canvas
 source_code: https://github.com/danmharris/Digital-Doilies
 ---

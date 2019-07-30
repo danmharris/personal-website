@@ -1,5 +1,6 @@
 ---
 title: Personal Website
+date: "2019-07-01"
 techs: HTML, CSS, Hugo
 source_code: https://github.com/danmharris/danmharris.com
 ---

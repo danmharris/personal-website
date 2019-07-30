@@ -1,5 +1,6 @@
 ---
 title: Project Management System
+date: "2018-11-01"
 techs: TypeScript, tslint, jest, serverless, AWS
 source_code: https://github.com/danmharris/Project-Management-System
 ---

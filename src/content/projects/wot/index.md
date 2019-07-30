@@ -1,5 +1,6 @@
 ---
 title: Web of Things (WoT)
+date: "2019-05-01"
 techs: WoT, Python, Flask, Django, Pytest
 source_code: https://github.com/danmharris/WoT-Servient
 featured: true
