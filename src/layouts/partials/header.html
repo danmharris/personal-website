@@ -7,7 +7,7 @@
         <div id="social-media">
             <ul>
                 {{ range .Site.Menus.social }}
-                    <li><a target="_blank" href="{{ .URL }}" rel="noopener">{{ .Pre }}</a></li>
+                    <li><a target="_blank" href="{{ .URL }}" rel="noopener" aria-label="Link to {{ .Identifier }} social media">{{ .Pre }}</a></li>
                 {{ end }}
             </ul>
         </div>
