@@ -2,6 +2,15 @@ baseURL = "https://danmharris.com/"
 languageCode = "en-gb"
 title = "Dan Harris"
 
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[blackfriday]
+  hrefTargetBlank = true
+  noreferrerLinks = true
+
+[permalinks]
+  posts = "/posts/:year/:month/:day/:slug"
+
 [menu]
   [[menu.social]]
     identifier = "github"
