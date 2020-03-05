@@ -127,6 +127,7 @@ a, a:visited {
     margin: 1em auto;
     max-width: 1000px;
     padding: 0 0.5em;
+    text-align: justify;
 }
 
 #footer {

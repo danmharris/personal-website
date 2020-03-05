@@ -1,3 +1,15 @@
 #content img {
     max-width: 100%;
 }
+
+#content figure {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#content figure > figcaption > p {
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.125em;
+    color: #2e2e2e;
+}
