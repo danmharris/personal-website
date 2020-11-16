@@ -1,6 +1,6 @@
 baseURL = "https://danmharris.com/"
 languageCode = "en-gb"
-title = "Dan Harris"
+title = "Dan Harris."
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
@@ -24,3 +24,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     identifier = "email"
     pre = "<i class='fas fa-envelope'></i>"
     url = "mailto:hello@danmharris.com"
+
+[params]
+  subtitle = "Developer. Graduate. Technology Enthusiast."

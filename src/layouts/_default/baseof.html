@@ -9,20 +9,37 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    {{ block "css" . }}
-
-    {{ end }}
+    {{ $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
 </head>
 <body>
-    {{ partial "header.html" . }}
-    <div id="content">
-        {{ block "content" . }}
+    <div class="container">
+        <header class="page-header">
+            <div>
+                <h1 class="page-header__title">{{ site.Title }}</h1>
+                <h2 class="page-header__subtitle">{{ site.Params.subtitle }}</h2>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    {{ $currentPage := . -}}
+                    <span class="menu__separator">/</span>
+                    {{ range site.Menus.main -}}
+                    <li class="menu__item">
+                        <a class='menu__link {{ if $currentPage.IsMenuCurrent "main" . }}menu__link--active{{ end }}' href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    <span class="menu__separator">/</span>
+                    {{ end -}}
+                </ul>
+            </nav>
+        </header>
+        <main class="content">
+            {{ block "content" . }}
 
-        {{ end }}
-    </div>
-    <div id="footer">
-        &copy; Dan Harris {{ now.Format "2006" }}
+            {{ end }}
+        </main>
+        <footer class="footer">
+            &copy; Dan Harris {{ now.Format "2006" }}
+        </footer>
     </div>
 </body>
 </html>
