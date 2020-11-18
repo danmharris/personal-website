@@ -9,7 +9,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   noreferrerLinks = true
 
 [permalinks]
-  posts = "/posts/:year/:month/:day/:slug"
+  posts = "/posts/:slug"
 
 [menu]
   [[menu.social]]
