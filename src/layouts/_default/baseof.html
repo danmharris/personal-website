@@ -16,7 +16,7 @@
     <div class="container">
         <header class="page-header">
             <div>
-                <div class="page-header__title">{{ site.Title }}</div>
+                <div class="page-header__title"><a class="menu__link" href="{{ site.BaseURL | relURL }}">{{ site.Title }}</a></div>
                 <div class="page-header__subtitle">{{ site.Params.subtitle }}</div>
             </div>
             <nav class="menu">
