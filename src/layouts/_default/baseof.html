@@ -38,7 +38,16 @@
             {{ end }}
         </main>
         <footer class="footer">
-            &copy; Dan Harris {{ now.Format "2006" }}
+            <nav class="menu">
+                <ul class="menu__list menu__list--center">
+                {{ range site.Menus.social -}}
+                <li class="menu__item">
+                    <a class="menu__link" href="{{ .URL }}">{{ .Pre }}</a>
+                </li>
+                {{ end -}}
+                </ul>
+            </nav>
+            <span>&copy; Dan Harris {{ now.Format "2006" }}</span>
         </footer>
     </div>
 </body>
