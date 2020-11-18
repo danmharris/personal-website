@@ -1,26 +1,31 @@
-{{ define "css" }}
-    <link rel="stylesheet" type="text/css" href="/css/home.css">
-{{ end }}
-{{ define "content" }}
-    {{ .Content }}
-
-    {{ $project := index (where (where site.RegularPages "Section" "projects") ".Params.featured" true) 0}}
-    {{ if $project }}
-        <h1>Featured Project</h1>
-        <div id="featured-project">
-            <div class="featured-project-image"><img src='{{ ($project.Resources.GetMatch "preview.jpg").Permalink | relURL }}' alt="Preview for featured project ({{ $project.Name }})"></div>
-            <div class="featured-project-overview">
-                {{ $project.Summary }}
-                <h3 class="featured-project-link"><a href="{{ $project.Permalink | relURL }}">Find out more</a></h3>
+{{ define "content" -}}
+    {{ $paginator := .Paginate (where site.RegularPages "Type" "posts") 5 -}}
+    {{ if eq $paginator.PageNumber 1 -}}
+        <div class="content__content">{{ .Content }} </div>
+    {{ end -}}
+    {{ if $paginator.Pages -}}
+        {{ range $paginator.Pages -}}
+        <article>
+            <div class="content__header">
+                <h2 class="content__title"><a class="content__permalink" href="{{ .Permalink | relURL }}">{{ .Title }}</a></h2>
+                <div class="content__subtitle">
+                    <i class="fas fa-calendar-alt"></i> {{ .Date.Format "2 January, 2006" }}
+                    / <i class="fas fa-stopwatch"></i> {{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}
+                </div>
             </div>
-        </div>
-    {{ end }}
-
-    {{ $posts := first 5 (where site.RegularPages "Section" "posts")}}
-    {{ if $posts }}
-        <h1>Recent Posts</h1>
-        {{ range $posts }}
-            {{ .Render "summary" }}
-        {{ end }}
-    {{ end }}
-{{ end }}
+            <div class="content__content">
+                <p>{{ .Summary }}</p>
+                <a href="{{ .Permalink | relURL }}">Read More</a>
+            </div>
+        </article>
+        {{ end -}}
+        {{ if $paginator.HasPrev -}}
+            <a class="button" href="{{ .Paginator.Prev.URL }}">Back</a>
+        {{ end -}}
+        {{ if $paginator.HasNext -}}
+            <a class="button" href="{{ .Paginator.Next.URL }}">Next</a>
+        {{ end -}}
+    {{ else -}}
+        <h2>There doesn't appear to be any posts... yet.</h2>
+    {{ end -}}
+{{ end -}}

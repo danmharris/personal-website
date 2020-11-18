@@ -7,7 +7,7 @@
     <meta name="Description" content="Dan Harris's personal website, introducing themself and the work that they do.">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     {{ $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
@@ -16,8 +16,8 @@
     <div class="container">
         <header class="page-header">
             <div>
-                <h1 class="page-header__title">{{ site.Title }}</h1>
-                <h2 class="page-header__subtitle">{{ site.Params.subtitle }}</h2>
+                <div class="page-header__title">{{ site.Title }}</div>
+                <div class="page-header__subtitle">{{ site.Params.subtitle }}</div>
             </div>
             <nav class="menu">
                 <ul class="menu__list">

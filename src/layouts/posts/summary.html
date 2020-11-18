@@ -1,9 +1,0 @@
-<div class="post-summary">
-    <h2><a href="{{ .Permalink | relURL }}">{{ .Title }}</a></h2>
-    <h4>
-        <i class="fas fa-calendar-alt"></i> {{ .Date.Format "2 January, 2006" }}
-        / <i class="fas fa-stopwatch"></i> {{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}
-    </h4>
-    <p>{{ .Summary }}</p>
-    <a href="{{ .Permalink | relURL }}">Read More</a>
-</div>
