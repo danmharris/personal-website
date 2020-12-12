@@ -11,27 +11,27 @@ body {
     width: 90%;
 }
 
-.page-header {
+.header {
     display: flex;
     border-bottom: 1px solid #888;
     padding: 0.5em 0;
     justify-content: space-between;
 }
 
-.page-header__title {
+.branding__title {
     margin: 0;
     font-size: 2em;
     font-weight: 600;
 }
 
-.page-header__subtitle {
+.branding__subtitle {
     margin: 0;
     font-style: italic;
     font-weight: 400;
     font-size: 1.25em;
 }
 
-.menu__list {
+.menu {
     list-style: none;
     padding: 0;
 }
@@ -57,7 +57,7 @@ body {
 }
 
 @media (max-width: 500px) {
-    .page-header {
+    .header {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -65,7 +65,7 @@ body {
 }
 
 @media (min-width: 501px) {
-    .menu__list:not(.menu__list--center) {
+    .menu:not(.menu--center) {
         text-align: right;
     }
 }
