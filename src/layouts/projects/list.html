@@ -1,6 +1,6 @@
 {{ define "content" -}}
-    {{ .Content }}
-
+<div class="content">
+    <div class="content__content">{{ .Content }}</div>
     {{ range .Pages -}}
     <div class="content__header">
         <h2 class="content__title">
@@ -20,4 +20,5 @@
         </figure>
     </div>
     {{ end -}}
+</div>
 {{ end -}}

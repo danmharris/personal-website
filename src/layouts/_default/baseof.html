@@ -14,13 +14,13 @@
 </head>
 <body>
     <div class="container">
-        <header class="page-header">
-            <div>
-                <div class="page-header__title"><a class="menu__link" href="{{ site.BaseURL | relURL }}">{{ site.Title }}</a></div>
-                <div class="page-header__subtitle">{{ site.Params.subtitle }}</div>
+        <header class="header">
+            <div class="branding">
+                <div class="branding__title"><a class="menu__link" href="{{ site.BaseURL | relURL }}">{{ site.Title }}</a></div>
+                <div class="branding__subtitle">{{ site.Params.subtitle }}</div>
             </div>
-            <nav class="menu">
-                <ul class="menu__list">
+            <nav>
+                <ul class="menu">
                     {{ $currentPage := . -}}
                     <span class="menu__separator">/</span>
                     {{ range site.Menus.main -}}
@@ -32,14 +32,14 @@
                 </ul>
             </nav>
         </header>
-        <main class="content">
+        <main>
             {{ block "content" . }}
 
             {{ end }}
         </main>
         <footer class="footer">
-            <nav class="menu">
-                <ul class="menu__list menu__list--center">
+            <nav>
+                <ul class="menu menu--center">
                 {{ range site.Menus.social -}}
                 <li class="menu__item">
                     <a class="menu__link" href="{{ .URL }}">{{ .Pre }}</a>

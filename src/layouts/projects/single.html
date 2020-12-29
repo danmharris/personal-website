@@ -1,4 +1,5 @@
 {{ define "content" -}}
+<div class="content">
     <div class="content__header">
         <h1 class="content__title">
             <a class="content__permalink" href="{{ .Permalink | relURL }}">{{ .Title }}</a>
@@ -16,4 +17,5 @@
             <img src="{{ (.Resources.GetMatch "preview.jpg").Permalink | relURL}}">
         </figure>
     </div>
+</div>
 {{ end -}}
