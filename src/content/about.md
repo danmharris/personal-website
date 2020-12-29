@@ -5,31 +5,13 @@ menu:
     weight: 20
 ---
 
-## Skills & Interests
-### Programming
-#### Web
-* HTML + CSS/SASS
-* JavaScript
-* TypeScript
-* React + Redux + Reactstrap
-* Angular
-* PHP with Symfony 3, FatFree
-* Static site generators e.g. Jekyll and Hugo (used for this site)
+Graduating in 2019 with a BSc. in Computer Science from the University of Southampton, I am now based in Bath where I currently work for Netcraft.
 
-#### Other
-* Java
-* Haskell
-* Python with Flask, Django
-* Perl 5
+I've been a full-time Linux user since 2018 and haven't looked back since. My daily driver is Ubuntu LTS (currently 20.04) with GNOME. My dotfiles are
+available on [GitHub](https://github.com/danmharris/dotfiles).
 
-### DevOps
-* Unit testing (JUnit, pytest, jest)
-* CI / CD
-* Docker
-* Git
+I tend to use a lot of Python for personal projects, but I'm also fond of other programming languages such as Go and TypeScript.
 
-### Homelab
-I've always been interested in the deployment and management of medium to large scale networks. This ranges from things such as virtualisation and hypervisors to automation and configuration management through tools such as Ansible. I aim to build a network like this in a home environment, which I will document on [my blog](/posts).
-
-### Linux
-I would consider myself a Linux advocate, having used it since 2009 and as a main operating system since 2018. I also try to use open source software wherever possible. My current distro is Ubuntu 18.04 LTS with stock GNOME 3 as the desktop environment, however I have used distros such as Debian, Fedora, Arch and OpenSUSE in the past.
+For the last few years I've run a homelab which is my testbed for tinkering with new services and technologies. In its current state it is a collection of virtual
+machines running under Proxmox and configured using Ansible. Its hosted things from mailservers, my personal cloud, metric collecting & monitoring and manages all
+my data.
