@@ -11,12 +11,12 @@ jobs:
           command: apt update && apt install -y hugo
       - run:
           name: Build site
-          command: hugo -s src/
+          command: hugo
       - run:
           name: Install CA certificates
           command: apt install -y ca-certificates
       - persist_to_workspace:
-          root: src/
+          root: ./
           paths:
             - public
   deploy:
