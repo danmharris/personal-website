@@ -114,6 +114,20 @@ body {
 .content__content figure {
     max-width: 90%;
     margin: 0.5em auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.content__content figure::after {
+    position: absolute;
+    content: '\f31e';
+    top: 0;
+    right: 0;
+    margin: 0.5em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 1.25em;
+    color: #ccc;
 }
 
 .content__content img {
