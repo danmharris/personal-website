@@ -12,10 +12,10 @@ jobs:
           at: /tmp/workspace
       - run:
           name: Deploy to S3
-          command: aws s3 sync /tmp/workspace/public s3://danmharris.com/ --delete
+          command: aws s3 sync /tmp/workspace/public s3://dan-harris-personal-website/ --delete
       - run:
           name: Invalidate cloudfront cache
-          command: aws cloudfront create-invalidation --distribution-id E1XBGLBIT4DR1S --paths "/*"
+          command: aws cloudfront create-invalidation --distribution-id E1HZ7YMVH9SL2L --paths "/*"
 orbs:
   hugo: circleci/hugo@1.0.0
 workflows:
