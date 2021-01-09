@@ -1,6 +1,6 @@
-baseURL = "https://danmharris.com/"
+baseURL = "https://danharr.is/"
 languageCode = "en-gb"
-title = "Dan Harris"
+title = "Dan Harris."
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
@@ -9,18 +9,21 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   noreferrerLinks = true
 
 [permalinks]
-  posts = "/posts/:year/:month/:day/:slug"
+  posts = "/posts/:slug"
 
 [menu]
   [[menu.social]]
     identifier = "github"
-    pre = "<i class='fab fa-github'></i>"
+    pre = "<i class='fab fa-github' aria-label='GitHub'></i>"
     url = "https://github.com/danmharris"
   [[menu.social]]
     identifier = "linkedin"
-    pre = "<i class='fab fa-linkedin'></i>"
+    pre = "<i class='fab fa-linkedin' aria-label='LinkedIn'></i>"
     url = "https://www.linkedin.com/in/dan-harris-730a6012a/"
   [[menu.social]]
     identifier = "email"
-    pre = "<i class='fas fa-envelope'></i>"
+    pre = "<i class='fas fa-envelope' aria-label='Email'></i>"
     url = "mailto:hello@danmharris.com"
+
+[params]
+  subtitle = "Developer. Graduate. Technology Enthusiast."

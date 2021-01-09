@@ -1,24 +1,5 @@
-version: 2
+version: 2.1
 jobs:
-  build:
-    docker:
-      - image: debian:buster
-    working_directory: ~/personal-website
-    steps:
-      - checkout
-      - run:
-          name: Install hugo
-          command: apt update && apt install -y hugo
-      - run:
-          name: Build site
-          command: hugo -s src/
-      - run:
-          name: Install CA certificates
-          command: apt install -y ca-certificates
-      - persist_to_workspace:
-          root: src/
-          paths:
-            - public
   deploy:
     docker:
       - image: circleci/python:3.7-stretch
@@ -31,19 +12,20 @@ jobs:
           at: /tmp/workspace
       - run:
           name: Deploy to S3
-          command: aws s3 sync /tmp/workspace/public s3://danmharris.com/ --delete
+          command: aws s3 sync /tmp/workspace/public s3://dan-harris-personal-website/ --delete
       - run:
           name: Invalidate cloudfront cache
-          command: aws cloudfront create-invalidation --distribution-id E1XBGLBIT4DR1S --paths "/*"
-
+          command: aws cloudfront create-invalidation --distribution-id E1HZ7YMVH9SL2L --paths "/*"
+orbs:
+  hugo: circleci/hugo@1.0.0
 workflows:
-  version: 2
   build-deploy:
     jobs:
-      - build
+      - hugo/build:
+          html-proofer: true
       - deploy:
           requires:
-            - build
+            - hugo/build
           filters:
             branches:
               only: master

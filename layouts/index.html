@@ -1,0 +1,33 @@
+{{ define "content" -}}
+    {{ $paginator := .Paginate (where site.RegularPages "Type" "posts") 5 -}}
+    {{ if eq $paginator.PageNumber 1 -}}
+    <div class="content">
+        <div class="content__content">{{ .Content }} </div>
+    </div>
+    {{ end -}}
+    {{ if $paginator.Pages -}}
+        {{ range $paginator.Pages -}}
+        <article class="content">
+            <div class="content__header">
+                <h2 class="content__title"><a class="content__permalink" href="{{ .Permalink | relURL }}">{{ .Title }}</a></h2>
+                <div class="content__subtitle">
+                    <i class="fas fa-calendar-alt"></i> {{ .Date.Format "2 January, 2006" }}
+                    / <i class="fas fa-stopwatch"></i> {{ .ReadingTime }} minute{{ if gt .ReadingTime 1 }}s{{ end }}
+                </div>
+            </div>
+            <div class="content__content">
+                <p>{{ .Summary }}</p>
+                <a href="{{ .Permalink | relURL }}">Read More</a>
+            </div>
+        </article>
+        {{ end -}}
+        {{ if $paginator.HasPrev -}}
+            <a class="button" href="{{ .Paginator.Prev.URL }}">Back</a>
+        {{ end -}}
+        {{ if $paginator.HasNext -}}
+            <a class="button" href="{{ .Paginator.Next.URL }}">Next</a>
+        {{ end -}}
+    {{ else -}}
+        <h2>There doesn't appear to be any posts... yet.</h2>
+    {{ end -}}
+{{ end -}}

@@ -1,0 +1,24 @@
+{{ define "content" -}}
+<div class="content">
+    <div class="content__content">{{ .Content }}</div>
+    {{ range .Pages -}}
+    <div class="content__header">
+        <h2 class="content__title">
+            <a class="content__permalink" href="{{ .Permalink | relURL }}">{{ .Title }}</a>
+        </h2>
+        {{ if isset .Params "source_code" }}
+        <div class="content__subtitle">
+            <i class="fas fa-code"></i>
+            <a class="content__permalink" target="_blank" href="{{ .Params.source_code }}">Source Code</a>
+        </div>
+        {{ end }}
+    </div>
+    <div class="content__content">
+        {{ .Content }}
+        <figure style="max-width: 60%">
+            <img src="{{ (.Resources.GetMatch "preview.jpg").Permalink | relURL}}">
+        </figure>
+    </div>
+    {{ end -}}
+</div>
+{{ end -}}
