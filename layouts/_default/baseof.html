@@ -55,6 +55,22 @@
     {{ end -}}
 </head>
 <body>
+    <script>
+        (function() {
+            var val = window.localStorage.getItem('theme');
+            if (val !== null) {
+                if (val === 'true') {
+                    document.body.classList.add('dark');
+                }
+                return;
+            }
+
+            var mql = window.matchMedia('(prefers-color-scheme: dark)');
+            if (mql.matches) {
+                document.body.classList.add('dark');
+            }
+        })();
+    </script>
     <div class="container">
         <header class="header">
             <div class="branding">
@@ -87,6 +103,9 @@
                     <a class="menu__link" href="{{ .URL }}">{{ .Pre }}</a>
                 </li>
                 {{ end -}}
+                <li class="menu__item">
+                    <a id="theme-toggle" style="cursor: pointer"><i class="fas fa-moon" aria-label="Toggle dark mode"></i></a>
+                </li>
                 </ul>
             </nav>
             <span>&copy; Dan Harris {{ now.Format "2006" }}</span>
@@ -94,13 +113,20 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.9.0/viewer.min.js" integrity="sha512-0goo56vbVLOJt9J6TMouBm2uE+iPssyO+70sdrT+J5Xbb5LsdYs31Mvj4+LntfPuV+VlK0jcvcinWQG5Hs3pOg==" crossorigin="anonymous"></script>
     <script>
-        var images = document.querySelectorAll('.content__content figure > img');
-        Array.prototype.forEach.call(images, function(img) {
-            new Viewer(img, {
-                'navbar': false,
-                'toolbar': false
+        (function() {
+            var images = document.querySelectorAll('.content__content figure > img');
+            Array.prototype.forEach.call(images, function(img) {
+                new Viewer(img, {
+                    'navbar': false,
+                    'toolbar': false
+                });
             });
-        });
+
+            document.getElementById('theme-toggle').addEventListener('click', function() {
+                var darkMode = document.body.classList.toggle('dark');
+                window.localStorage.setItem('theme', (darkMode ? 'true' : 'false'));
+            });
+        })();
     </script>
 </body>
 </html>
