@@ -132,6 +132,7 @@ body {
 
 .content__content figure {
     max-width: 90%;
+    width: max-content;
     margin: 0.5em auto;
     position: relative;
     cursor: pointer;
