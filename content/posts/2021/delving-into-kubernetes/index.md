@@ -4,9 +4,9 @@ date: 2021-05-16T16:00:00+01:00
 ---
 I have recently been learning and using Kubernetes in my homelab as a means to manage a lot of self-hosted apps. Overall I've been pretty happy with it and it has helped simplify my setup.
 
-{{< figure src="container_evolution.png" alt="Container evolution" caption="Source: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/" >}}
-
 The first question to answer is why to use a system such as this in the first place. In the last 10 years or so there has been quite a shift in the way that people deploy and run their applications and resources. In the beginning there was bare metal where you would have one physical machine with one OS that hosted multiple applications. Then virtualisation came along and allowed people to segregate those applications so that they had their own OS stack for each, isolating the resources which caused less conflicts and allowed for easier management. More recently we've got containerisation platforms which make far better use of the available resources by sharing low level components with the host OS. Tools such as Docker have given an easy means of packaging and deploying containers which also helped contribute to their popularity.
+
+{{< figure src="container_evolution.png" alt="Container evolution" caption="Evolution of containers ([source](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/))." >}}
 
 But how do you manage these containers at scale, when say you have then spread across multiple physical machines? What happens if one of those machines crashes? How do you distribute the load? This is where something like Kubernetes comes in. Kubernetes is a container orchestration tool, which is a way of automating and managing the state of containers and their resources. You add several machines to a cluster and then tell it what you want to run and it will make sure that remains the case. If a machine suffers a failure or otherwise crashes it will spot that and make sure that what it was running is restarted elsewhere, minimising downtime.
 
