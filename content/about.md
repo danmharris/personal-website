@@ -5,7 +5,7 @@ menu:
     weight: 20
 ---
 
-Graduating in 2019 with a BSc. in Computer Science from the University of Southampton, I am now based in Bath where I currently work for Netcraft.
+Graduating in 2019 with a BSc. in Computer Science from the University of Southampton, I am now based in Bath/Bristol where I currently work for Made Tech.
 
 I've been a full-time Linux user since 2018 and haven't looked back since. My daily driver is Ubuntu LTS (currently 20.04) with GNOME. My dotfiles are
 available on [GitHub](https://github.com/danmharris/dotfiles).
