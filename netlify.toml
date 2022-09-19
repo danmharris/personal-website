@@ -1,0 +1,21 @@
+[build]
+  command = "hugo"
+  publish = "public"
+
+[[redirects]]
+  from = "https://www.danharr.is/*"
+  to = "https://danharr.is/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://danmharris.com/*"
+  to = "https://danharr.is/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.danmharris.com/*"
+  to = "https://danharr.is/:splat"
+  status = 301
+  force = true
