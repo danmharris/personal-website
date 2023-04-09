@@ -2,10 +2,13 @@
   "name": "personal-website",
   "version": "1.0.0",
   "scripts": {
-    "format": "prettier ."
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "prepare": "husky install"
   },
   "author": "Dan Harris",
   "devDependencies": {
+    "husky": "^8.0.3",
     "prettier": "^2.8.7",
     "prettier-plugin-go-template": "^0.0.13"
   }
