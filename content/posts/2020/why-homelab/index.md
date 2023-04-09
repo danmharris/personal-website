@@ -27,7 +27,7 @@ Ny favourite ones which have been the document storage tools, for which I use a 
 
 {{< figure src="bookstack.png" alt="BookStack page" caption="I have all my recipes at my disposal now" >}}
 
-As mentioned above, homelabbing teaches you to follow best practice. Probably one of the most useful one of these is in regards to backups. In my lab I have built a backup infrastructure that ensures my data is replicated and minimises the risk of loss. For instance, the Nextcloud data mentioned above is stored on my NAS which backs up weekly  to an external drive. Every time I go back to see family I sync the NAS to a portable drive which is taken with me and synced to a drive there.
+As mentioned above, homelabbing teaches you to follow best practice. Probably one of the most useful one of these is in regards to backups. In my lab I have built a backup infrastructure that ensures my data is replicated and minimises the risk of loss. For instance, the Nextcloud data mentioned above is stored on my NAS which backs up weekly to an external drive. Every time I go back to see family I sync the NAS to a portable drive which is taken with me and synced to a drive there.
 
 ## Its fun!
 

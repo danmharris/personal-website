@@ -1,21 +1,30 @@
 {{ define "content" -}}
-<div class="content">
+  <div class="content">
     <div class="content__header">
-        <h1 class="content__title">
-            <a class="content__permalink" href="{{ .Permalink | relURL }}">{{ .Title }}</a>
-        </h1>
-        {{ if isset .Params "source_code" }}
+      <h1 class="content__title">
+        <a class="content__permalink" href="{{ .Permalink | relURL }}"
+          >{{ .Title }}</a
+        >
+      </h1>
+      {{ if isset .Params "source_code" }}
         <div class="content__subtitle">
-            <i class="fas fa-code"></i>
-            <a class="content__permalink" target="_blank" href="{{ .Params.source_code }}">Source Code</a>
+          <i class="fas fa-code"></i>
+          <a
+            class="content__permalink"
+            target="_blank"
+            href="{{ .Params.source_code }}"
+            >Source Code</a
+          >
         </div>
-        {{ end }}
+      {{ end }}
     </div>
     <div class="content__content">
-        {{ .Content }}
-        <figure>
-            <img src="{{ (.Resources.GetMatch "preview.jpg").Permalink | relURL}}">
-        </figure>
+      {{ .Content }}
+      <figure>
+        <img
+          src="{{ (.Resources.GetMatch "preview.jpg").Permalink | relURL }}"
+        />
+      </figure>
     </div>
-</div>
+  </div>
 {{ end -}}

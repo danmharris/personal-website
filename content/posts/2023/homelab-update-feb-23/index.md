@@ -21,10 +21,10 @@ The storage is on a Synology DS214j 2 Bay NAS with 2x3TB WD Red drives in it. It
 Kubernetes is now my primary platform for running apps and services, and has grown quite significantly since 2021. I've learned a lot more of the workings of running a cluster
 and also some tools and utilities for making this job a whole lot easier. Some of the additions are:
 
-* [external-dns](https://github.com/kubernetes-sigs/external-dns) - Automatically creates DNS records for ingress resources on my DNS server, to save managing them separately
-* [calico](https://www.tigera.io/project-calico/) - This is a container network interface (CNI) which replaces flannel from before. A nicety it has is BGP support. So I have it peering with my primary router and means
-I can give services IP addresses without the need for tools like metallb.
-* [renovate](https://github.com/renovatebot/renovate) - Not _really_ just for Kubernetes but I added this on a CronJob to check the manifests for potential updates. This makes keeping apps up to date a lot easier.
+- [external-dns](https://github.com/kubernetes-sigs/external-dns) - Automatically creates DNS records for ingress resources on my DNS server, to save managing them separately
+- [calico](https://www.tigera.io/project-calico/) - This is a container network interface (CNI) which replaces flannel from before. A nicety it has is BGP support. So I have it peering with my primary router and means
+  I can give services IP addresses without the need for tools like metallb.
+- [renovate](https://github.com/renovatebot/renovate) - Not _really_ just for Kubernetes but I added this on a CronJob to check the manifests for potential updates. This makes keeping apps up to date a lot easier.
 
 I've been making a strive to have as much infrastructure as code as possible now, and removing the need to do any manual clicking around in interfaces or commands in a terminal.
 To help with that I've been making more extensive use of [Ansible](https://www.ansible.com/). It is now responsible for making VMs, setting up the OS of them and creating any necessary DNS records.

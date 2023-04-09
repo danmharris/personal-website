@@ -1,14 +1,16 @@
 {{ define "content" -}}
-{{ range (where .Pages "Type" "posts").GroupByDate "2006" "desc" -}}
-<div class="content">
-    <h2 class="content__header">{{ .Key }}</h2>
-    <ul class="archive__list">
+  {{ range (where .Pages "Type" "posts").GroupByDate "2006" "desc" -}}
+    <div class="content">
+      <h2 class="content__header">{{ .Key }}</h2>
+      <ul class="archive__list">
         {{ range .Pages.ByPublishDate }}
-        <li class="archive__item">
-            <a class="content__permalink" href="{{ .Permalink | relURL }}">{{ .Date.Format "02 Jan" }} - {{ .Title }}</a>
-        </li>
+          <li class="archive__item">
+            <a class="content__permalink" href="{{ .Permalink | relURL }}"
+              >{{ .Date.Format "02 Jan" }} - {{ .Title }}</a
+            >
+          </li>
         {{ end }}
-    </ul>
-</div>
-{{ end -}}
+      </ul>
+    </div>
+  {{ end -}}
 {{ end -}}
