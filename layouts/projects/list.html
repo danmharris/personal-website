@@ -1,7 +1,7 @@
 {{ define "content" -}}
   <div class="content">
     <div class="content__content">{{ .Content }}</div>
-    {{ range .Pages -}}
+    {{ range (where .Pages "Params.active" true) }}
       <div class="content__header">
         <h2 class="content__title">
           <a class="content__permalink" href="{{ .Permalink | relURL }}"
@@ -22,12 +22,22 @@
       </div>
       <div class="content__content">
         {{ .Content }}
-        <figure style="max-width: 60%">
-          <img
-            src="{{ (.Resources.GetMatch "preview.jpg").Permalink | relURL }}"
-          />
-        </figure>
+        {{ with .Resources.GetMatch "preview.jpg" }}
+          <figure style="max-width: 60%">
+            <img src="{{ .Permalink | relURL }}" />
+          </figure>
+        {{ end }}
       </div>
     {{ end -}}
+    <div class="content__header">
+      <h2 class="content__title">Past Projects</h2>
+    </div>
+    <div class="content__content">
+      <ul>
+        {{ range (where .Pages "Params.active" "ne" true) }}
+          <li><a href="{{ .Permalink | relURL }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
 {{ end -}}

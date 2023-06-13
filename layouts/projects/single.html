@@ -20,11 +20,11 @@
     </div>
     <div class="content__content">
       {{ .Content }}
-      <figure>
-        <img
-          src="{{ (.Resources.GetMatch "preview.jpg").Permalink | relURL }}"
-        />
-      </figure>
+      {{ with .Resources.GetMatch "preview.jpg" }}
+        <figure>
+          <img src="{{ .Permalink | relURL }}" />
+        </figure>
+      {{ end }}
     </div>
   </div>
 {{ end -}}
