@@ -22,8 +22,12 @@
           </div>
         </div>
         <div class="content__content">
-          <p>{{ .Summary }}</p>
-          <a href="{{ .Permalink | relURL }}">Read More</a>
+          <p>
+            {{ .Summary }}
+            {{ if .Truncated }}
+              <a href="{{ .Permalink | relURL }}">Read More</a>
+            {{ end }}
+          </p>
         </div>
       </article>
     {{ end -}}

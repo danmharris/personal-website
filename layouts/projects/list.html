@@ -21,7 +21,12 @@
         {{ end }}
       </div>
       <div class="content__content">
-        {{ .Content }}
+        <p>
+          {{ .Summary }}
+          {{ if .Truncated }}
+            <a href="{{ .Permalink | relURL }}">Read More</a>
+          {{ end }}
+        </p>
         {{ with .Resources.GetMatch "preview.jpg" }}
           <figure style="max-width: 60%">
             <img src="{{ .Permalink | relURL }}" />
