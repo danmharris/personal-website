@@ -5,13 +5,11 @@ menu:
     weight: 20
 ---
 
-Graduating in 2019 with a BSc. in Computer Science from the University of Southampton, I am now based in Bath/Bristol where I currently work for Made Tech.
+I am a Manchester based Senior Software Engineer currently working for [Made Tech](https://www.madetech.com). Before that I lived in Bath working for [Netcraft](https://www.netcraft.com). I have a BSc. in Computer Science from the University of Southampton.
 
-I've been a full-time Linux user since 2018 and haven't looked back since. My daily driver is Ubuntu LTS (currently 20.04) with GNOME. My dotfiles are
-available on [GitHub](https://github.com/danmharris/dotfiles).
+Day-to-day I work with Ruby and TypeScript but have used a variety of other languages for personal projects, including Go, Python and Elixir.
 
-I tend to use a lot of Python for personal projects, but I'm also fond of other programming languages such as Go and TypeScript.
+I'm a strong supporter of open source software and have been a full time Linux user since 2018. My current setup is Debian Testing with GNOME. My configurations are available in my [dotfiles](https://github.com/danmharris/dotfiles) repository.
 
-For the last few years I've run a homelab which is my testbed for tinkering with new services and technologies. In its current state it is a collection of virtual
-machines running under Proxmox and configured using Ansible. Its hosted things from mailservers, my personal cloud, metric collecting & monitoring and manages all
-my data.
+I also run a lot of services locally in a homelab which is also a testbed for new services and technology. It is currently a Kubernetes cluster managed via GitOps (Flux).
+The configuration is available in my [homelab](https://github.com/danmharris/homelab) repository.
