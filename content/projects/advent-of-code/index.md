@@ -31,3 +31,11 @@ As my new job used a fair amount of Ruby code this felt like a perfect opportuni
 Also for a bit of fun I wrote a scaffolding script that would generate the test function and class for each day, alongside a runner script that would run any day.
 
 And, just to be completely overkill, I added CI to lint and test the code as it was pushed to GitHub. In hindsight linting was probably a mistake as, due to the complexity of some of the problems, I started with some... less than elegant solutions which made the linter unhappy.
+
+## 2023 - Elixir
+
+https://github.com/danmharris/advent-2023
+
+This time I wanted to try something different. Previous attempts had always been in imperative languages but I have had an interest in functional languages. Elixir felt like a great choice to experiment as it has a Ruby inspired syntax.
+
+As before this used tests to validate the sample inputs were working correctly. However this time I also used the test runner to run the full dataset and didn't have a dedicated runner.
