@@ -4,12 +4,12 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "prettier --check .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "author": "Dan Harris",
   "devDependencies": {
-    "husky": "^8.0.3",
-    "prettier": "^2.8.7",
-    "prettier-plugin-go-template": "^0.0.13"
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "prettier-plugin-go-template": "^0.0.15"
   }
 }
