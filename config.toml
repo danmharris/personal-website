@@ -4,6 +4,8 @@ title = "Dan Harris."
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+enableEmoji = true
+
 [blackfriday]
   hrefTargetBlank = true
   noreferrerLinks = true

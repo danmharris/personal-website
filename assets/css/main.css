@@ -165,6 +165,12 @@ body {
   color: var(--text-secondary);
 }
 
+.content__content code {
+  text-wrap: wrap;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
 .archive__list {
   list-style: none;
   padding: 0;
